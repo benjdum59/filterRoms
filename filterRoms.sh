@@ -1,5 +1,14 @@
 #!/bin/bash
 
+function fctInit {
+  rarMimeType="application/x-rar-compressed"
+  rarMimeType2="application/x-rar"
+  zipMimeType="application/zip"
+  tarMimeType="application/tar"
+  targzMimeType="application/tar+gzip"
+  gzipMimeType="application/x-gzip"
+}
+
 function fctCheckArgs {
   if [ -z "$archivePath" ] || [ -z $destinationPath  ]; then
     fctErrorArguments
@@ -12,18 +21,35 @@ function fctCheckArgs {
   fi
 }
 
+function fctGetPatterns {
+  patterns=()
+  while read line; do    
+    echo $line | grep -v "^#" 1>/dev/null 
+    if [ $? -eq 0 ]; then
+      patterns+=($line)
+    fi  
+  done < patterns.txt
+  
+  if [ ${#patterns[@]} -eq 0 ]; then
+    fctErrorPattern
+  fi
+
+  echo ${patterns[0]}
+  echo ${patterns[1]}
+}
+
 function fctUncompress {
   mimetype=`file --mime-type  ${archivePath} | cut -d ':' -f 2`
-  echo $mimetype
-#  filename=`basename ${archivePath}`
-#  multipleExtension=${filename#*.}
-#  simpleExtension=${filename##*.}
-# echo $filename
-#echo $multipleExtension
-#echo $simpleExtension  
-#  if [ -z "$simpleExtension" ]; then
-#    fctErrorExtension $filename
-#  fi
+  echo "Mime-Type found: $mimetype"
+
+  if [ $mimetype = $rarMimeType ] || [ $mimetype = $rarMimeType2 ]; then
+    echo "File is a rar file"
+  fi
+}
+
+function fctErrorPattern {
+  echo "No pattern defined in patterns.txt"
+  exit 1
 }
 
 function fctErrorExtension {
@@ -40,9 +66,9 @@ function fctErrorArguments {
   echo "Usage: ./filterRoms.sh <archive path> <destination path>"
   exit 1
 }
-
+fctGetPatterns
 archivePath=$1
 destinationPath=$2
-
+fctInit
 fctCheckArgs
 fctUncompress
