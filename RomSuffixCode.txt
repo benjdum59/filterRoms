@@ -1,0 +1,20 @@
+(U): US
+(E): Europe
+(J): Japan
+
+[a] Alternate
+[p] Pirate
+[b] Bad Dump     (avoid these, they may not work!)
+[t] Trained
+[f] Fixed
+[T-] OldTranslation
+[T+] NewerTranslation
+[h] Hack
+(-) Unknown Year
+[o] Overdump
+[!] Verified Good Dump
+(M#) Multilanguage (# of Languages)
+(###) Checksum
+(??k) ROM Size
+ZZZ_ Unclassified
+(Unl) Unlicensed
