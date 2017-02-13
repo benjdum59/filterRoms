@@ -35,3 +35,4 @@ Limitations
 
 - Only works with 7z archive for now
 - Only uncompress 1st level of hierarchy (does not uncompress archive of archive of archive...)
+- Avoid using paths with spaces or some special characters (it is so much pain in the a** to treat them). So put the product in a "normal" path. However, files with special characters or spaces should work (if not please tell me).
