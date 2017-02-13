@@ -22,7 +22,9 @@ If there is an output directory, please ensure it is empty.
 
 You can now run the following command:
 
+```bash
 ./filterRoms.sh
+```
 
 Output
 ------
