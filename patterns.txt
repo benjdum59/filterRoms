@@ -2,7 +2,42 @@
 # Feel free to modify it
 # Each line befinning with a '#' character will be ignored
 
-# Europe
+## United States of America
+#(U)
+## Europe
 (E)
-# Verified good dump
+## Japan
+#(J)
+
+## Alternate
+#[a]
+## Pirate
+#[p]
+## Bad Dump (avoid these, they may not work!)
+#[b]
+## Trained
+#[t]
+## Fixed
+#[f]
+## Old Translation
+#[T-]
+## Newer Translation
+#[T+]
+## Hack
+#[h]
+## Unknown Year
+#(-)
+## Overdump
+#[o]
+## Verified Good Dump
 [!]
+## Multilanguage (# of Languages)
+#(M#)
+## Checksum
+#(###)
+## Rom Size
+#(??k)
+## Unclassified
+#ZZZ_
+## Unlicensed
+#(Unl)
