@@ -65,10 +65,43 @@ function fctIdentifyMimeType {
 
   if [ $mimetype = $rarMimeType ] || [ $mimetype = $rarMimeType2 ]; then
     echo "File is a rar file"
+    echo "Not yet implemented"
   elif [ $mimetype = ${sevenZMimeType} ]; then
     echo "File is a 7z file"
     fct7zProcess "$1"
-  fi 
+  elif [ $mimetype = ${zipMimeType} ]; then
+    echo "File is a zip file"
+    echo "Not yet implemented"
+  elif [ $mimetype = ${tarMimeType} ]; then
+    echo "File is a tar file"
+    echo "Not yet implemented"
+  elif [ $mimetype = ${targzMimeType} ]; then
+    echo "File is a tar.gz file"
+    echo "Not yet implemented"
+  elif [ $mimetype = ${gzipMimeType} ]; then
+    echo "File is a gz file"
+    echo "Not yet implemented"
+  else
+    echo "File will be treated as a regular file"
+    fctRegularFile "$1" 
+  fi
+
+#zipMimeType="application/zip"
+#tarMimeType="application/tar"
+#targzMimeType="application/tar+gzip"
+#gzipMimeType="application/x-gzip" 
+}
+
+function fctRegularFile {
+  filePath=$1
+  filename=`basename ${filePath}`
+  for pattern in "${patterns[@]}"
+    do
+      filename=`echo $filename | grep ${pattern}`
+    done
+    if [ "$filename" != "" ]; then
+      echo "cp '${filePath}' ${destinationPath}" >> ${destinationPath}/regilarFilesCommands.txt
+    fi   
 }
 
 function fct7zProcess {
@@ -81,13 +114,11 @@ do
       filename=`echo $filename | grep ${pattern}`
     done
     if [ "$filename" != "" ]; then
-      #filename=`echo ${filename} | sed 's/\[\!\]/\[\\!\]/g'`
       filename="${filename//!/\\!}"
       compressedFile="${compressedFile//!/\\!}"
       echo "Treating $filename"
       echo 7z e \"${compressedFile}\" -o${destinationPath} \"${filename}\" >> ${destinationPath}/7zCommands.txt
     fi
-#done < <(7z l "$1" | awk -F ' ' '{ $1 = ""; $2 = ""; $3 = ""; $4 = ""; print $0}')
 done < <(7z l "${compressedFile}" -slt | grep "^Path = " | awk -F '=' '{ print $2 }')
 }
 
