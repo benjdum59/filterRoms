@@ -46,6 +46,7 @@ do
   containsElement "${checksum}" "${resultArray[@]}"
   if [ $? -ne 0 ]; then
     filename=`echo ${checksum} | awk -F '_' ' { print $3 } '`
+    diff "ref/${filename}" "result/${filename}"
     showError "${filename} files differ"
   fi  
 done
