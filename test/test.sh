@@ -10,16 +10,16 @@ function showError {
 #Go the the test directory
 scriptPath=$(cd $(dirname $0);echo $PWD)
 cd ${scriptPath}
-cp ${scriptPath}/input/* ${scriptPath}/../input
+cp ./input/* ../input
 #Cleaning output directory
 
-find ${scriptPath}/../output -type f -not -name .gitignore -delete
+find ../output -type f -not -name .gitignore -delete
 
 #Running code
-${scriptPath}/../filterRoms.sh
+../filterRoms.sh
 
 #Moving results
-find ${scriptPath}/../output -type f -not -name .gitignore   -exec mv '{}' ${scriptPath}/result \;
+find ../output -type f -not -name .gitignore   -exec mv '{}' ./result \;
 
 #Analysing results
 error=0
