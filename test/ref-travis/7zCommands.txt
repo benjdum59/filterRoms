@@ -1,0 +1,1 @@
+7z e "/home/travis/build/benjdum59/filterRoms/input/Archive.7z" -o/home/travis/build/benjdum59/output "bdt(E)[\!].txt"
