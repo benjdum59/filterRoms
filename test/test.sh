@@ -51,3 +51,4 @@ do
 done
 echo Done
 echo "$error error(s)"
+exit $error
