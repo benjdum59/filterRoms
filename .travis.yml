@@ -1,4 +1,9 @@
 language: bash
 
 script:
-    - bash test/test.sh 
+    - bash test/test.sh
+
+addons:
+    apt:
+        packages:
+            - p7zip-full 
