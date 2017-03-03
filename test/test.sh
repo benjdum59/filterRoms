@@ -11,7 +11,7 @@ function showError {
 scriptPath=$(cd $(dirname $0);echo $PWD)
 cd ${scriptPath}
 cp ./input/* ../input
-if [ "$1" -eq "travis"  ]; then
+if [ "$1" = "travis" ]; then
   refDir='ref-travis'
 else
   refDir='ref'
