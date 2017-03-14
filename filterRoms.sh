@@ -71,7 +71,7 @@ function fctIdentifyMimeType {
     fct7zProcess "$1"
   elif [ $mimetype = ${zipMimeType} ]; then
     echo "File is a zip file"
-    echo "Not yet implemented"
+    fct7zProcess "$1"
   elif [ $mimetype = ${tarMimeType} ]; then
     echo "File is a tar file"
     echo "Not yet implemented"
@@ -90,6 +90,25 @@ function fctIdentifyMimeType {
 #tarMimeType="application/tar"
 #targzMimeType="application/tar+gzip"
 #gzipMimeType="application/x-gzip" 
+}
+
+function fctZipProcess {
+compressedFile=$1
+while read -r line
+do
+  filename="$line"
+     for pattern in "${patterns[@]}"
+     do
+       filename=`echo $filename | grep ${pattern}`
+     done
+     if [ "$filename" != "" ]; then
+       filename="${filename//!/\\!}"
+       compressedFile="${compressedFile//!/\\!}"
+       echo "Treating $filename"
+       echo unzip  \"${compressedFile}\" -p \"${filename}\" -d \"${destinationPath}\"  >> ${destinationPath}/ZipCommands.txt
+     fi
+#done < <(unzip -l "$compressedFile" | tail -n +4 | tail -r | tail -n +2 | tail -r | awk -F ' ' '{ $1=""; $2=""; $3="";  print $0 }')
+done < <(unzip -Z1 "$compressedFile")
 }
 
 function fctRegularFile {
