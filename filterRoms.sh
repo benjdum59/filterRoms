@@ -7,6 +7,7 @@ function fctInit {
   rarMimeType2="application/x-rar"
   zipMimeType="application/zip"
   tarMimeType="application/tar"
+  tarMimeType2="application/x-tar"
   targzMimeType="application/tar+gzip"
   gzipMimeType="application/x-gzip"
   sevenZMimeType="application/x-7z-compressed"
@@ -72,9 +73,9 @@ function fctIdentifyMimeType {
   elif [ $mimetype = ${zipMimeType} ]; then
     echo "File is a zip file"
     fct7zProcess "$1"
-  elif [ $mimetype = ${tarMimeType} ]; then
+  elif [ $mimetype = ${tarMimeType} ] || [ $mimetype = ${tarMimeType2} ]; then
     echo "File is a tar file"
-    echo "Not yet implemented"
+    fct7zProcess "$1"
   elif [ $mimetype = ${targzMimeType} ]; then
     echo "File is a tar.gz file"
     echo "Not yet implemented"

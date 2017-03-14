@@ -1,3 +1,5 @@
 7z e "/home/travis/build/benjdum59/filterRoms/input/Archive.7z" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!].txt"
 7z e "/home/travis/build/benjdum59/filterRoms/input/Archive.zip" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!] copie.txt"
 7z e "/home/travis/build/benjdum59/filterRoms/input/Archive.zip" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!].txt"
+7z e "/home/travis/build/benjdum59/filterRoms/input/Fichier comprimé.tar" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!] copie.txt"
+7z e "/home/travis/build/benjdum59/filterRoms/input/Fichier comprimé.tar" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!].txt"
