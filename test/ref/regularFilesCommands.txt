@@ -1,1 +1,2 @@
+cp '/Users/benjamindumont/Documents/Development/shell/filterRoms/input/bdt(E)[!] copie.txt' /Users/benjamindumont/Documents/Development/shell/filterRoms/output
 cp '/Users/benjamindumont/Documents/Development/shell/filterRoms/input/bdt(E)[!].txt' /Users/benjamindumont/Documents/Development/shell/filterRoms/output
