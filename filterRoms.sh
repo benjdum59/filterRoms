@@ -9,6 +9,7 @@ function fctInit {
   tarMimeType="application/tar"
   tarMimeType2="application/x-tar"
   targzMimeType="application/tar+gzip"
+  tgzMimeType="application/x-bzip2"
   gzipMimeType="application/x-gzip"
   sevenZMimeType="application/x-7z-compressed"
   archivePath="${scriptPath}/input"
