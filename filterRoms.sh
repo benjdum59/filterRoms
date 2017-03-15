@@ -63,8 +63,7 @@ done
 
 function fctIdentifyMimeType {
   mimetype=`file --mime-type  "$1" | cut -d ':' -f 2`
-  echo "Mime-Type found: $mimetype"
-
+  echo "Mime-Type found: $mimetype for file $1"
   if [ $mimetype = $rarMimeType ] || [ $mimetype = $rarMimeType2 ]; then
     echo "File is a rar file"
     echo "Not yet implemented"
@@ -83,6 +82,9 @@ function fctIdentifyMimeType {
   elif [ $mimetype = ${gzipMimeType} ]; then
     echo "File is a gz file"
     echo "Not yet implemented"
+  elif [ $mimetype = ${tgzMimeType} ]; then
+    echo "File is a tbz2 file"
+    fctTgz2Process "$1" 
   else
     echo "File will be treated as a regular file"
     fctRegularFile "$1" 
@@ -141,6 +143,24 @@ do
       echo 7z e \"${compressedFile}\" -o${destinationPath} \"${filename}\" >> ${destinationPath}/7zCommands.txt
     fi
 done < <(7z l "${compressedFile}" -slt | grep "^Path = " | awk -F '=' '{ print $2 }')
+}
+
+function fctTgz2Process {
+compressedFile=$1
+  while read -r line
+  do
+    filename="$line"
+    for pattern in "${patterns[@]}"
+    do
+      filename=`echo $filename | grep ${pattern}`
+    done
+    if [ "$filename" != "" ]; then
+      filename="${filename//!/\\!}"
+      compressedFile="${compressedFile//!/\\!}"
+      echo "Treating $filename"
+      echo "7z x  \"${compressedFile}\" -so |  7z x -si -ttar -o${destinationPath} \"${filename}\"" >> ${destinationPath}/7zCommands.txt
+    fi
+done < <(tar -jtf "${compressedFile}")
 }
 
 function fctErrorDirectoryEmpty {
