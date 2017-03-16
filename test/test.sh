@@ -54,6 +54,21 @@ do
     filename=`echo ${checksum} | awk -F '_' ' { print $3 } '`
     diff "${refDir}/${filename}" "result/${filename}"
     showError "${filename} files differ"
+    echo "========== REFERENCE =========="
+    cat "${refDir}/${filename}"
+    echo "==========   RESULT  =========="
+    cat "result/$filename"
+    echo "==============================="
+    hexdump -C "${refDir}/${filename}" > ref.hex
+    hexdump -C "result/${filename}" > result.hex
+    echo "========= HEX DIFF ============"
+    diff file1.hex file2.hex
+    echo "========== REFERENCE =========="
+    cat ref.hex
+    echo "==========   RESULT  =========="
+    cat result.hex
+    echo "==============================="
+    
   fi  
 done
 echo Done
