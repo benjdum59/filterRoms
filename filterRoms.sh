@@ -81,7 +81,13 @@ function fctIdentifyMimeType {
     echo "Not yet implemented"
   elif [ $mimetype = ${gzipMimeType} ]; then
     echo "File is a gz file"
-    echo "Not yet implemented"
+    extension="${1##*.}"
+    if [ "$extension" = "tgz" ]; then
+      echo "File is a tgz file"
+      fctTgz2Process "$1"
+    else   
+      fct7zProcess "$1"
+    fi
   elif [ $mimetype = ${tgzMimeType} ]; then
     echo "File is a tbz2 file"
     fctTgz2Process "$1" 
