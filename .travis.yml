@@ -9,4 +9,4 @@ addons:
             - p7zip-full
 
 after_success:
-    - bash deploy.sh
+    - bash .merge.sh
