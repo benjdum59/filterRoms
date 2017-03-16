@@ -14,5 +14,5 @@ if [ "$TRAVIS_BRANCH" == "develop" ]; then
   cd $directory
   git checkout master
   git merge origin/develop --no-edit
-  git push origin master
+  git push origin master --quiet
 fi
