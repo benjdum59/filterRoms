@@ -6,4 +6,7 @@ script:
 addons:
     apt:
         packages:
-            - p7zip-full 
+            - p7zip-full
+
+after_success:
+    - bash .merge.sh
