@@ -9,4 +9,5 @@ addons:
             - p7zip-full
 
 after_success:
-    - bash echo SUCCESS
+    script:
+        - echo "SUCCESS"
