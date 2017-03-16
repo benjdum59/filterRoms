@@ -8,8 +8,8 @@ if [ "$TRAVIS_BRANCH" == "develop" ]; then
   url="https://${GITHUB_KEY}@github.com/${TRAVIS_REPO_SLUG}.git"
   cd /tmp
   git clone ${url}
-  export GIT_COMMITTER_EMAIL='travis@travis'
-  export GIT_COMMITTER_NAME='Travis CI'
+  git config --global user.email "travis@travis"
+  git config --global user.name "Travis CI"
   directory=`echo ${TRAVIS_REPO_SLUG} | awk -F '/' ' { print $2  } '`
   cd $directory
   git checkout master
