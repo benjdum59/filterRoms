@@ -13,6 +13,6 @@ if [ "$TRAVIS_BRANCH" == "develop" ]; then
   echo $directory
   cd $directory
   git checkout master
-  git merge develop -m "Merge from develop into master after build success"
+  git merge origin/develop --no-edit
   git push origin master
 fi
