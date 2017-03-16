@@ -84,7 +84,7 @@ function fctIdentifyMimeType {
     extension="${1##*.}"
     if [ "$extension" = "tgz" ]; then
       echo "File is a tgz file"
-      fctTgz2Process "$1"
+      fctTgzProcess "$1"
     else   
       fct7zProcess "$1"
     fi
@@ -95,30 +95,6 @@ function fctIdentifyMimeType {
     echo "File will be treated as a regular file"
     fctRegularFile "$1" 
   fi
-
-#zipMimeType="application/zip"
-#tarMimeType="application/tar"
-#targzMimeType="application/tar+gzip"
-#gzipMimeType="application/x-gzip" 
-}
-
-function fctZipProcess {
-compressedFile=$1
-while read -r line
-do
-  filename="$line"
-     for pattern in "${patterns[@]}"
-     do
-       filename=`echo $filename | grep ${pattern}`
-     done
-     if [ "$filename" != "" ]; then
-       filename="${filename//!/\\!}"
-       compressedFile="${compressedFile//!/\\!}"
-       echo "Treating $filename"
-       echo unzip  \"${compressedFile}\" -p \"${filename}\" -d \"${destinationPath}\"  >> ${destinationPath}/ZipCommands.txt
-     fi
-#done < <(unzip -l "$compressedFile" | tail -n +4 | tail -r | tail -n +2 | tail -r | awk -F ' ' '{ $1=""; $2=""; $3="";  print $0 }')
-done < <(unzip -Z1 "$compressedFile")
 }
 
 function fctRegularFile {
@@ -168,6 +144,26 @@ compressedFile=$1
     fi
 done < <(tar -jtf "${compressedFile}")
 }
+
+function fctTgzProcess {
+compressedFile=$1
+  while read -r line
+  do
+    filename="$line"
+    for pattern in "${patterns[@]}"
+    do
+      filename=`echo $filename | grep ${pattern}`
+    done
+    if [ "$filename" != "" ]; then
+      filename="${filename//!/\\!}"
+      compressedFile="${compressedFile//!/\\!}"
+      filename=`echo $filename`
+      echo "Treating $filename BDT"
+      echo "7z x  \"${compressedFile}\" -so |  7z x -si -ttar -o${destinationPath} \"${filename}\"" >> ${destinationPath}/7zCommands.txt
+    fi
+  done < <(tar -tf "${compressedFile}")
+}
+
 
 function fctErrorDirectoryEmpty {
   echo "$1 should not be empty"
