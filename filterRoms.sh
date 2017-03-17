@@ -14,10 +14,6 @@ function fctInit {
   sevenZMimeType="application/x-7z-compressed"
   archivePath="${scriptPath}/input"
   destinationPath="${scriptPath}/output"
-
-  echo $scriptPath
-  echo $archivePath
-  echo $destinationPath
 }
 
 function fctGetPatterns {
@@ -32,9 +28,6 @@ function fctGetPatterns {
   if [ ${#patterns[@]} -eq 0 ]; then
     fctErrorPattern
   fi
-
-  echo ${patterns[0]}
-  echo ${patterns[1]}
 }
 
 function fctCheckEnv {
@@ -158,7 +151,7 @@ compressedFile=$1
       filename="${filename//!/\\!}"
       compressedFile="${compressedFile//!/\\!}"
       filename=`echo $filename`
-      echo "Treating $filename BDT"
+      echo "Treating $filename"
       echo "7z x  \"${compressedFile}\" -so |  7z x -si -ttar -o${destinationPath} \"${filename}\"" >> ${destinationPath}/7zCommands.txt
     fi
   done < <(tar -tf "${compressedFile}")
