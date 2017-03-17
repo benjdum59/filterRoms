@@ -30,76 +30,76 @@
 000001d0  75 6d 65 6e 74 73 2f 44  65 76 65 6c 6f 70 6d 65  |uments/Developme|
 000001e0  6e 74 2f 73 68 65 6c 6c  2f 66 69 6c 74 65 72 52  |nt/shell/filterR|
 000001f0  6f 6d 73 2f 6f 75 74 70  75 74 20 22 62 64 74 28  |oms/output "bdt(|
-00000200  45 29 5b 5c 21 5d 2e 74  78 74 22 0a 37 7a 20 78  |E)[\!].txt".7z x|
-00000210  20 20 22 2f 55 73 65 72  73 2f 62 65 6e 6a 61 6d  |  "/Users/benjam|
-00000220  69 6e 64 75 6d 6f 6e 74  2f 44 6f 63 75 6d 65 6e  |indumont/Documen|
-00000230  74 73 2f 44 65 76 65 6c  6f 70 6d 65 6e 74 2f 73  |ts/Development/s|
-00000240  68 65 6c 6c 2f 66 69 6c  74 65 72 52 6f 6d 73 2f  |hell/filterRoms/|
-00000250  69 6e 70 75 74 2f 46 69  63 68 69 65 72 20 63 6f  |input/Fichier co|
-00000260  6d 70 72 69 6d 65 2e 74  67 7a 22 20 2d 73 6f 20  |mprime.tgz" -so |
-00000270  7c 20 20 37 7a 20 78 20  2d 73 69 20 2d 74 74 61  ||  7z x -si -tta|
-00000280  72 20 2d 6f 2f 55 73 65  72 73 2f 62 65 6e 6a 61  |r -o/Users/benja|
-00000290  6d 69 6e 64 75 6d 6f 6e  74 2f 44 6f 63 75 6d 65  |mindumont/Docume|
-000002a0  6e 74 73 2f 44 65 76 65  6c 6f 70 6d 65 6e 74 2f  |nts/Development/|
-000002b0  73 68 65 6c 6c 2f 66 69  6c 74 65 72 52 6f 6d 73  |shell/filterRoms|
-000002c0  2f 6f 75 74 70 75 74 20  22 62 64 74 28 45 29 5b  |/output "bdt(E)[|
-000002d0  5c 21 5d 20 63 6f 70 69  65 2e 74 78 74 22 0a 37  |\!] copie.txt".7|
-000002e0  7a 20 78 20 20 22 2f 55  73 65 72 73 2f 62 65 6e  |z x  "/Users/ben|
-000002f0  6a 61 6d 69 6e 64 75 6d  6f 6e 74 2f 44 6f 63 75  |jamindumont/Docu|
-00000300  6d 65 6e 74 73 2f 44 65  76 65 6c 6f 70 6d 65 6e  |ments/Developmen|
-00000310  74 2f 73 68 65 6c 6c 2f  66 69 6c 74 65 72 52 6f  |t/shell/filterRo|
-00000320  6d 73 2f 69 6e 70 75 74  2f 46 69 63 68 69 65 72  |ms/input/Fichier|
-00000330  20 63 6f 6d 70 72 69 6d  65 2e 74 67 7a 22 20 2d  | comprime.tgz" -|
-00000340  73 6f 20 7c 20 20 37 7a  20 78 20 2d 73 69 20 2d  |so |  7z x -si -|
-00000350  74 74 61 72 20 2d 6f 2f  55 73 65 72 73 2f 62 65  |ttar -o/Users/be|
-00000360  6e 6a 61 6d 69 6e 64 75  6d 6f 6e 74 2f 44 6f 63  |njamindumont/Doc|
-00000370  75 6d 65 6e 74 73 2f 44  65 76 65 6c 6f 70 6d 65  |uments/Developme|
-00000380  6e 74 2f 73 68 65 6c 6c  2f 66 69 6c 74 65 72 52  |nt/shell/filterR|
-00000390  6f 6d 73 2f 6f 75 74 70  75 74 20 22 62 64 74 28  |oms/output "bdt(|
-000003a0  45 29 5b 5c 21 5d 2e 74  78 74 22 0a 37 7a 20 65  |E)[\!].txt".7z e|
-000003b0  20 22 2f 55 73 65 72 73  2f 62 65 6e 6a 61 6d 69  | "/Users/benjami|
-000003c0  6e 64 75 6d 6f 6e 74 2f  44 6f 63 75 6d 65 6e 74  |ndumont/Document|
-000003d0  73 2f 44 65 76 65 6c 6f  70 6d 65 6e 74 2f 73 68  |s/Development/sh|
-000003e0  65 6c 6c 2f 66 69 6c 74  65 72 52 6f 6d 73 2f 69  |ell/filterRoms/i|
-000003f0  6e 70 75 74 2f 46 69 63  68 69 65 72 20 63 6f 6d  |nput/Fichier com|
-00000400  70 72 69 6d 65 2e 74 61  72 22 20 2d 6f 2f 55 73  |prime.tar" -o/Us|
-00000410  65 72 73 2f 62 65 6e 6a  61 6d 69 6e 64 75 6d 6f  |ers/benjamindumo|
-00000420  6e 74 2f 44 6f 63 75 6d  65 6e 74 73 2f 44 65 76  |nt/Documents/Dev|
-00000430  65 6c 6f 70 6d 65 6e 74  2f 73 68 65 6c 6c 2f 66  |elopment/shell/f|
-00000440  69 6c 74 65 72 52 6f 6d  73 2f 6f 75 74 70 75 74  |ilterRoms/output|
-00000450  20 22 62 64 74 28 45 29  5b 5c 21 5d 20 63 6f 70  | "bdt(E)[\!] cop|
-00000460  69 65 2e 74 78 74 22 0a  37 7a 20 65 20 22 2f 55  |ie.txt".7z e "/U|
-00000470  73 65 72 73 2f 62 65 6e  6a 61 6d 69 6e 64 75 6d  |sers/benjamindum|
-00000480  6f 6e 74 2f 44 6f 63 75  6d 65 6e 74 73 2f 44 65  |ont/Documents/De|
-00000490  76 65 6c 6f 70 6d 65 6e  74 2f 73 68 65 6c 6c 2f  |velopment/shell/|
-000004a0  66 69 6c 74 65 72 52 6f  6d 73 2f 69 6e 70 75 74  |filterRoms/input|
-000004b0  2f 46 69 63 68 69 65 72  20 63 6f 6d 70 72 69 6d  |/Fichier comprim|
-000004c0  65 2e 74 61 72 22 20 2d  6f 2f 55 73 65 72 73 2f  |e.tar" -o/Users/|
-000004d0  62 65 6e 6a 61 6d 69 6e  64 75 6d 6f 6e 74 2f 44  |benjamindumont/D|
-000004e0  6f 63 75 6d 65 6e 74 73  2f 44 65 76 65 6c 6f 70  |ocuments/Develop|
-000004f0  6d 65 6e 74 2f 73 68 65  6c 6c 2f 66 69 6c 74 65  |ment/shell/filte|
-00000500  72 52 6f 6d 73 2f 6f 75  74 70 75 74 20 22 62 64  |rRoms/output "bd|
-00000510  74 28 45 29 5b 5c 21 5d  2e 74 78 74 22 0a 37 7a  |t(E)[\!].txt".7z|
-00000520  20 78 20 20 22 2f 55 73  65 72 73 2f 62 65 6e 6a  | x  "/Users/benj|
-00000530  61 6d 69 6e 64 75 6d 6f  6e 74 2f 44 6f 63 75 6d  |amindumont/Docum|
-00000540  65 6e 74 73 2f 44 65 76  65 6c 6f 70 6d 65 6e 74  |ents/Development|
-00000550  2f 73 68 65 6c 6c 2f 66  69 6c 74 65 72 52 6f 6d  |/shell/filterRom|
-00000560  73 2f 69 6e 70 75 74 2f  46 69 63 68 69 65 72 20  |s/input/Fichier |
-00000570  63 6f 6d 70 72 69 6d 65  2e 74 62 7a 32 22 20 2d  |comprime.tbz2" -|
-00000580  73 6f 20 7c 20 20 37 7a  20 78 20 2d 73 69 20 2d  |so |  7z x -si -|
-00000590  74 74 61 72 20 2d 6f 2f  55 73 65 72 73 2f 62 65  |ttar -o/Users/be|
-000005a0  6e 6a 61 6d 69 6e 64 75  6d 6f 6e 74 2f 44 6f 63  |njamindumont/Doc|
-000005b0  75 6d 65 6e 74 73 2f 44  65 76 65 6c 6f 70 6d 65  |uments/Developme|
-000005c0  6e 74 2f 73 68 65 6c 6c  2f 66 69 6c 74 65 72 52  |nt/shell/filterR|
-000005d0  6f 6d 73 2f 6f 75 74 70  75 74 20 22 62 64 74 28  |oms/output "bdt(|
-000005e0  45 29 5b 5c 21 5d 20 63  6f 70 69 65 2e 74 78 74  |E)[\!] copie.txt|
-000005f0  22 0a 37 7a 20 78 20 20  22 2f 55 73 65 72 73 2f  |".7z x  "/Users/|
-00000600  62 65 6e 6a 61 6d 69 6e  64 75 6d 6f 6e 74 2f 44  |benjamindumont/D|
-00000610  6f 63 75 6d 65 6e 74 73  2f 44 65 76 65 6c 6f 70  |ocuments/Develop|
-00000620  6d 65 6e 74 2f 73 68 65  6c 6c 2f 66 69 6c 74 65  |ment/shell/filte|
-00000630  72 52 6f 6d 73 2f 69 6e  70 75 74 2f 46 69 63 68  |rRoms/input/Fich|
-00000640  69 65 72 20 63 6f 6d 70  72 69 6d 65 2e 74 62 7a  |ier comprime.tbz|
-00000650  32 22 20 2d 73 6f 20 7c  20 20 37 7a 20 78 20 2d  |2" -so |  7z x -|
+00000200  45 29 5b 5c 21 5d 2e 74  78 74 22 0a 37 7a 20 65  |E)[\!].txt".7z e|
+00000210  20 22 2f 55 73 65 72 73  2f 62 65 6e 6a 61 6d 69  | "/Users/benjami|
+00000220  6e 64 75 6d 6f 6e 74 2f  44 6f 63 75 6d 65 6e 74  |ndumont/Document|
+00000230  73 2f 44 65 76 65 6c 6f  70 6d 65 6e 74 2f 73 68  |s/Development/sh|
+00000240  65 6c 6c 2f 66 69 6c 74  65 72 52 6f 6d 73 2f 69  |ell/filterRoms/i|
+00000250  6e 70 75 74 2f 46 69 63  68 69 65 72 20 63 6f 6d  |nput/Fichier com|
+00000260  70 72 69 6d 65 2e 74 61  72 22 20 2d 6f 2f 55 73  |prime.tar" -o/Us|
+00000270  65 72 73 2f 62 65 6e 6a  61 6d 69 6e 64 75 6d 6f  |ers/benjamindumo|
+00000280  6e 74 2f 44 6f 63 75 6d  65 6e 74 73 2f 44 65 76  |nt/Documents/Dev|
+00000290  65 6c 6f 70 6d 65 6e 74  2f 73 68 65 6c 6c 2f 66  |elopment/shell/f|
+000002a0  69 6c 74 65 72 52 6f 6d  73 2f 6f 75 74 70 75 74  |ilterRoms/output|
+000002b0  20 22 62 64 74 28 45 29  5b 5c 21 5d 20 63 6f 70  | "bdt(E)[\!] cop|
+000002c0  69 65 2e 74 78 74 22 0a  37 7a 20 65 20 22 2f 55  |ie.txt".7z e "/U|
+000002d0  73 65 72 73 2f 62 65 6e  6a 61 6d 69 6e 64 75 6d  |sers/benjamindum|
+000002e0  6f 6e 74 2f 44 6f 63 75  6d 65 6e 74 73 2f 44 65  |ont/Documents/De|
+000002f0  76 65 6c 6f 70 6d 65 6e  74 2f 73 68 65 6c 6c 2f  |velopment/shell/|
+00000300  66 69 6c 74 65 72 52 6f  6d 73 2f 69 6e 70 75 74  |filterRoms/input|
+00000310  2f 46 69 63 68 69 65 72  20 63 6f 6d 70 72 69 6d  |/Fichier comprim|
+00000320  65 2e 74 61 72 22 20 2d  6f 2f 55 73 65 72 73 2f  |e.tar" -o/Users/|
+00000330  62 65 6e 6a 61 6d 69 6e  64 75 6d 6f 6e 74 2f 44  |benjamindumont/D|
+00000340  6f 63 75 6d 65 6e 74 73  2f 44 65 76 65 6c 6f 70  |ocuments/Develop|
+00000350  6d 65 6e 74 2f 73 68 65  6c 6c 2f 66 69 6c 74 65  |ment/shell/filte|
+00000360  72 52 6f 6d 73 2f 6f 75  74 70 75 74 20 22 62 64  |rRoms/output "bd|
+00000370  74 28 45 29 5b 5c 21 5d  2e 74 78 74 22 0a 37 7a  |t(E)[\!].txt".7z|
+00000380  20 78 20 20 22 2f 55 73  65 72 73 2f 62 65 6e 6a  | x  "/Users/benj|
+00000390  61 6d 69 6e 64 75 6d 6f  6e 74 2f 44 6f 63 75 6d  |amindumont/Docum|
+000003a0  65 6e 74 73 2f 44 65 76  65 6c 6f 70 6d 65 6e 74  |ents/Development|
+000003b0  2f 73 68 65 6c 6c 2f 66  69 6c 74 65 72 52 6f 6d  |/shell/filterRom|
+000003c0  73 2f 69 6e 70 75 74 2f  46 69 63 68 69 65 72 20  |s/input/Fichier |
+000003d0  63 6f 6d 70 72 69 6d 65  2e 74 62 7a 32 22 20 2d  |comprime.tbz2" -|
+000003e0  73 6f 20 7c 20 20 37 7a  20 78 20 2d 73 69 20 2d  |so |  7z x -si -|
+000003f0  74 74 61 72 20 2d 6f 2f  55 73 65 72 73 2f 62 65  |ttar -o/Users/be|
+00000400  6e 6a 61 6d 69 6e 64 75  6d 6f 6e 74 2f 44 6f 63  |njamindumont/Doc|
+00000410  75 6d 65 6e 74 73 2f 44  65 76 65 6c 6f 70 6d 65  |uments/Developme|
+00000420  6e 74 2f 73 68 65 6c 6c  2f 66 69 6c 74 65 72 52  |nt/shell/filterR|
+00000430  6f 6d 73 2f 6f 75 74 70  75 74 20 22 62 64 74 28  |oms/output "bdt(|
+00000440  45 29 5b 5c 21 5d 20 63  6f 70 69 65 2e 74 78 74  |E)[\!] copie.txt|
+00000450  22 0a 37 7a 20 78 20 20  22 2f 55 73 65 72 73 2f  |".7z x  "/Users/|
+00000460  62 65 6e 6a 61 6d 69 6e  64 75 6d 6f 6e 74 2f 44  |benjamindumont/D|
+00000470  6f 63 75 6d 65 6e 74 73  2f 44 65 76 65 6c 6f 70  |ocuments/Develop|
+00000480  6d 65 6e 74 2f 73 68 65  6c 6c 2f 66 69 6c 74 65  |ment/shell/filte|
+00000490  72 52 6f 6d 73 2f 69 6e  70 75 74 2f 46 69 63 68  |rRoms/input/Fich|
+000004a0  69 65 72 20 63 6f 6d 70  72 69 6d 65 2e 74 62 7a  |ier comprime.tbz|
+000004b0  32 22 20 2d 73 6f 20 7c  20 20 37 7a 20 78 20 2d  |2" -so |  7z x -|
+000004c0  73 69 20 2d 74 74 61 72  20 2d 6f 2f 55 73 65 72  |si -ttar -o/User|
+000004d0  73 2f 62 65 6e 6a 61 6d  69 6e 64 75 6d 6f 6e 74  |s/benjamindumont|
+000004e0  2f 44 6f 63 75 6d 65 6e  74 73 2f 44 65 76 65 6c  |/Documents/Devel|
+000004f0  6f 70 6d 65 6e 74 2f 73  68 65 6c 6c 2f 66 69 6c  |opment/shell/fil|
+00000500  74 65 72 52 6f 6d 73 2f  6f 75 74 70 75 74 20 22  |terRoms/output "|
+00000510  62 64 74 28 45 29 5b 5c  21 5d 2e 74 78 74 22 0a  |bdt(E)[\!].txt".|
+00000520  37 7a 20 78 20 20 22 2f  55 73 65 72 73 2f 62 65  |7z x  "/Users/be|
+00000530  6e 6a 61 6d 69 6e 64 75  6d 6f 6e 74 2f 44 6f 63  |njamindumont/Doc|
+00000540  75 6d 65 6e 74 73 2f 44  65 76 65 6c 6f 70 6d 65  |uments/Developme|
+00000550  6e 74 2f 73 68 65 6c 6c  2f 66 69 6c 74 65 72 52  |nt/shell/filterR|
+00000560  6f 6d 73 2f 69 6e 70 75  74 2f 46 69 63 68 69 65  |oms/input/Fichie|
+00000570  72 20 63 6f 6d 70 72 69  6d 65 2e 74 67 7a 22 20  |r comprime.tgz" |
+00000580  2d 73 6f 20 7c 20 20 37  7a 20 78 20 2d 73 69 20  |-so |  7z x -si |
+00000590  2d 74 74 61 72 20 2d 6f  2f 55 73 65 72 73 2f 62  |-ttar -o/Users/b|
+000005a0  65 6e 6a 61 6d 69 6e 64  75 6d 6f 6e 74 2f 44 6f  |enjamindumont/Do|
+000005b0  63 75 6d 65 6e 74 73 2f  44 65 76 65 6c 6f 70 6d  |cuments/Developm|
+000005c0  65 6e 74 2f 73 68 65 6c  6c 2f 66 69 6c 74 65 72  |ent/shell/filter|
+000005d0  52 6f 6d 73 2f 6f 75 74  70 75 74 20 22 62 64 74  |Roms/output "bdt|
+000005e0  28 45 29 5b 5c 21 5d 20  63 6f 70 69 65 2e 74 78  |(E)[\!] copie.tx|
+000005f0  74 22 0a 37 7a 20 78 20  20 22 2f 55 73 65 72 73  |t".7z x  "/Users|
+00000600  2f 62 65 6e 6a 61 6d 69  6e 64 75 6d 6f 6e 74 2f  |/benjamindumont/|
+00000610  44 6f 63 75 6d 65 6e 74  73 2f 44 65 76 65 6c 6f  |Documents/Develo|
+00000620  70 6d 65 6e 74 2f 73 68  65 6c 6c 2f 66 69 6c 74  |pment/shell/filt|
+00000630  65 72 52 6f 6d 73 2f 69  6e 70 75 74 2f 46 69 63  |erRoms/input/Fic|
+00000640  68 69 65 72 20 63 6f 6d  70 72 69 6d 65 2e 74 67  |hier comprime.tg|
+00000650  7a 22 20 2d 73 6f 20 7c  20 20 37 7a 20 78 20 2d  |z" -so |  7z x -|
 00000660  73 69 20 2d 74 74 61 72  20 2d 6f 2f 55 73 65 72  |si -ttar -o/User|
 00000670  73 2f 62 65 6e 6a 61 6d  69 6e 64 75 6d 6f 6e 74  |s/benjamindumont|
 00000680  2f 44 6f 63 75 6d 65 6e  74 73 2f 44 65 76 65 6c  |/Documents/Devel|

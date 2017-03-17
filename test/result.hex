@@ -106,4 +106,31 @@
 00000690  6f 70 6d 65 6e 74 2f 73  68 65 6c 6c 2f 66 69 6c  |opment/shell/fil|
 000006a0  74 65 72 52 6f 6d 73 2f  6f 75 74 70 75 74 20 22  |terRoms/output "|
 000006b0  62 64 74 28 45 29 5b 5c  21 5d 2e 74 78 74 22 0a  |bdt(E)[\!].txt".|
-000006c0
+000006c0  37 7a 20 78 20 20 22 2f  55 73 65 72 73 2f 62 65  |7z x  "/Users/be|
+000006d0  6e 6a 61 6d 69 6e 64 75  6d 6f 6e 74 2f 44 6f 63  |njamindumont/Doc|
+000006e0  75 6d 65 6e 74 73 2f 44  65 76 65 6c 6f 70 6d 65  |uments/Developme|
+000006f0  6e 74 2f 73 68 65 6c 6c  2f 66 69 6c 74 65 72 52  |nt/shell/filterR|
+00000700  6f 6d 73 2f 69 6e 70 75  74 2f 74 61 72 2d 61 72  |oms/input/tar-ar|
+00000710  63 68 69 76 65 2d 6e 61  6d 65 2e 74 61 72 2e 67  |chive-name.tar.g|
+00000720  7a 22 20 2d 73 6f 20 7c  20 20 37 7a 20 78 20 2d  |z" -so |  7z x -|
+00000730  73 69 20 2d 74 74 61 72  20 2d 6f 2f 55 73 65 72  |si -ttar -o/User|
+00000740  73 2f 62 65 6e 6a 61 6d  69 6e 64 75 6d 6f 6e 74  |s/benjamindumont|
+00000750  2f 44 6f 63 75 6d 65 6e  74 73 2f 44 65 76 65 6c  |/Documents/Devel|
+00000760  6f 70 6d 65 6e 74 2f 73  68 65 6c 6c 2f 66 69 6c  |opment/shell/fil|
+00000770  74 65 72 52 6f 6d 73 2f  6f 75 74 70 75 74 20 22  |terRoms/output "|
+00000780  62 64 74 28 45 29 5b 5c  21 5d 20 63 6f 70 69 65  |bdt(E)[\!] copie|
+00000790  2e 74 78 74 22 0a 37 7a  20 78 20 20 22 2f 55 73  |.txt".7z x  "/Us|
+000007a0  65 72 73 2f 62 65 6e 6a  61 6d 69 6e 64 75 6d 6f  |ers/benjamindumo|
+000007b0  6e 74 2f 44 6f 63 75 6d  65 6e 74 73 2f 44 65 76  |nt/Documents/Dev|
+000007c0  65 6c 6f 70 6d 65 6e 74  2f 73 68 65 6c 6c 2f 66  |elopment/shell/f|
+000007d0  69 6c 74 65 72 52 6f 6d  73 2f 69 6e 70 75 74 2f  |ilterRoms/input/|
+000007e0  74 61 72 2d 61 72 63 68  69 76 65 2d 6e 61 6d 65  |tar-archive-name|
+000007f0  2e 74 61 72 2e 67 7a 22  20 2d 73 6f 20 7c 20 20  |.tar.gz" -so |  |
+00000800  37 7a 20 78 20 2d 73 69  20 2d 74 74 61 72 20 2d  |7z x -si -ttar -|
+00000810  6f 2f 55 73 65 72 73 2f  62 65 6e 6a 61 6d 69 6e  |o/Users/benjamin|
+00000820  64 75 6d 6f 6e 74 2f 44  6f 63 75 6d 65 6e 74 73  |dumont/Documents|
+00000830  2f 44 65 76 65 6c 6f 70  6d 65 6e 74 2f 73 68 65  |/Development/she|
+00000840  6c 6c 2f 66 69 6c 74 65  72 52 6f 6d 73 2f 6f 75  |ll/filterRoms/ou|
+00000850  74 70 75 74 20 22 62 64  74 28 45 29 5b 5c 21 5d  |tput "bdt(E)[\!]|
+00000860  2e 74 78 74 22 0a                                 |.txt".|
+00000866
