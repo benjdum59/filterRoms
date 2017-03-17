@@ -1,6 +1,5 @@
 #/bin/bash
 
-locale charmap
 function showError {
   echo '!!!!!!!!!!!!!!!!!!!!!!!!!   ERROR   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
   echo $1
