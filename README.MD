@@ -7,7 +7,7 @@ develop: [![Build Status](https://travis-ci.org/benjdum59/filterRoms.svg?branch=
 
 Introduction
 -------
-These tool is design to help people to filter roms using some official pre-defined patterns. This product has been written for Mac OS and should work on all Unix system. As command line arguments/results may differ between these OS, there is no garantee  to work on Unix system. Please give me your feedback! May also work on Windows using a unix simulator (Cygwin, Git Bash...).
+These tool is design to help people to filter roms using some official pre-defined patterns. This product has been written for Mac OS and should work on all Unix system. As command line arguments/results may differ between these OS, there is no guarantee  to work on Unix system. Please give me your feedback! May also work on Windows using a unix simulator (Cygwin, Git Bash...).
 
 Pre-requisite
 -------
@@ -17,7 +17,7 @@ Pre-requisite
 
 Usage
 -----
-Configure the pattern.txt file. You can use the RomSuffixCode.txt to dertermine the patterns you want.
+Configure the pattern.txt file. You can use the RomSuffixCode.txt to determine the patterns you want.
 
 **Warning**: consider all patterns will be treated together (logical AND)
 
