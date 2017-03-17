@@ -40,7 +40,7 @@ So, the script creates output/7zCommands.txt file. You can open the file, select
 Limitations
 -----------
 
-- Only works with these kind of archive: 7z, zip, tar, tgz, tbz2
+- Only works with these kind of archive: 7z, zip, tar, tgz, tbz2, tar.gz, gz, rar
 - Works with regular files too
 - Only uncompress 1st level of hierarchy (does not uncompress archive of archive of archive...)
 - Avoid using paths with spaces or some special characters (it is so much pain in the a** to treat them). So put the product in a "normal" path. However, files with special characters or spaces should work (if not please tell me).
