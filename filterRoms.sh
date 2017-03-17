@@ -52,14 +52,12 @@ find ${archivePath} -type f -print0 | sort | while IFS= read -r -d '' archiveFil
 done
 }
 
-
-
 function fctIdentifyMimeType {
   mimetype=`file --mime-type  "$1" | cut -d ':' -f 2`
   echo "Mime-Type found: $mimetype for file $1"
   if [ $mimetype = $rarMimeType ] || [ $mimetype = $rarMimeType2 ]; then
     echo "File is a rar file"
-    echo "Not yet implemented"
+    fct7zProcess "$1"
   elif [ $mimetype = ${sevenZMimeType} ]; then
     echo "File is a 7z file"
     fct7zProcess "$1"
@@ -71,7 +69,7 @@ function fctIdentifyMimeType {
     fct7zProcess "$1"
   elif [ $mimetype = ${targzMimeType} ]; then
     echo "File is a tar.gz file"
-    echo "Not yet implemented"
+    fctTgzProcess "$1"
   elif [ $mimetype = ${gzipMimeType} ]; then
     echo "File is a gz file"
     extension="${1##*.}"
