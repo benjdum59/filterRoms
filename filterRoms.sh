@@ -42,7 +42,6 @@ function fctCheckEnv {
 }
 
 function fctProceed {
-
 find ${archivePath} -type f -print0 | sort | while IFS= read -r -d '' archiveFile; do 
   echo  "$archiveFile" | grep -v '.gitignore' 2>/dev/null
   if [ $? -eq 0 ]; then
