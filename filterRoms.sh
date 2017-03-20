@@ -90,13 +90,14 @@ function fctIdentifyMimeType {
 
 function fctRegularFile {
   filePath=$1
-  filename=`basename ${filePath}`
+  filename=`basename "${filePath}"`
   for pattern in "${patterns[@]}"
     do
       filename=`echo $filename | grep ${pattern}`
     done
     if [ "$filename" != "" ]; then
-      echo "cp '${filePath}' ${destinationPath}" >> ${destinationPath}/regularFilesCommands.txt
+      filePath="${filePath//!/\\!}"
+      echo "cp \"${filePath}\" \"${destinationPath}\"" >> ${destinationPath}/regularFilesCommands.txt
     fi   
 }
 
