@@ -96,7 +96,8 @@ function fctRegularFile {
       filename=`echo $filename | grep ${pattern}`
     done
     if [ "$filename" != "" ]; then
-      echo "cp '${filePath}' ${destinationPath}" >> ${destinationPath}/regularFilesCommands.txt
+      filePath="${filePath//!/\\!}"
+      echo "cp \"${filePath}\" \"${destinationPath}\"" >> ${destinationPath}/regularFilesCommands.txt
     fi   
 }
 

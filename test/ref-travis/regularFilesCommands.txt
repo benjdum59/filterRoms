@@ -1,2 +1,3 @@
-cp '/home/travis/build/benjdum59/filterRoms/input/bdt(E)[!] copie.txt' /home/travis/build/benjdum59/filterRoms/output
-cp '/home/travis/build/benjdum59/filterRoms/input/bdt(E)[!].txt' /home/travis/build/benjdum59/filterRoms/output
+cp "/home/travis/build/benjdum59/filterRoms/input/bdt(E)[\!] copie.txt" "/home/travis/build/benjdum59/filterRoms/output"
+cp "/home/travis/build/benjdum59/filterRoms/input/bdt(E)[\!].txt" "/home/travis/build/benjdum59/filterRoms/output"
+cp "/home/travis/build/benjdum59/filterRoms/input/test ' (E)[\!].txt" "/home/travis/build/benjdum59/filterRoms/output"
