@@ -90,7 +90,7 @@ function fctIdentifyMimeType {
 
 function fctRegularFile {
   filePath=$1
-  filename=`basename ${filePath}`
+  filename=`basename "${filePath}"`
   for pattern in "${patterns[@]}"
     do
       filename=`echo $filename | grep ${pattern}`
