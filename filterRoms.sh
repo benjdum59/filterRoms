@@ -28,6 +28,12 @@ function fctGetPatterns {
   if [ ${#patterns[@]} -eq 0 ]; then
     fctErrorPattern
   fi
+  while read line; do
+    echo $line | grep -v "^#" 1>/dev/null
+    if [ $? -eq 0 ]; then
+      exclusions+=($line)
+    fi
+  done < ${scriptPath}/exclusions.txt
 }
 
 function fctCheckEnv {
@@ -92,13 +98,17 @@ function fctRegularFile {
   filePath=$1
   filename=`basename "${filePath}"`
   for pattern in "${patterns[@]}"
-    do
-      filename=`echo $filename | grep ${pattern}`
-    done
-    if [ "$filename" != "" ]; then
+  do
+    filename=`echo $filename | grep -F ${pattern}`
+  done
+  for exclusion in "${exclusions[@]}"
+  do
+    filename=`echo $filename | grep -v -F ${exclusion}`
+  done
+  if [ "$filename" != "" ]; then
       filePath="${filePath//!/\\!}"
       echo "cp \"${filePath}\" \"${destinationPath}\"" >> ${destinationPath}/regularFilesCommands.txt
-    fi   
+  fi   
 }
 
 function fct7zProcess {
@@ -106,9 +116,14 @@ compressedFile=$1
 while read -r line
 do
     filename="$line"
+    echo "FILENAME:$filename"
     for pattern in "${patterns[@]}"
     do
-      filename=`echo $filename | grep ${pattern}`
+      filename=`echo $filename | grep -F ${pattern}`
+    done
+    for exclusion in "${exclusions[@]}"
+    do
+      filename=`echo $filename | grep -v -F ${exclusion}`
     done
     if [ "$filename" != "" ]; then
       filename="${filename//!/\\!}"
@@ -126,7 +141,11 @@ compressedFile=$1
     filename="$line"
     for pattern in "${patterns[@]}"
     do
-      filename=`echo $filename | grep ${pattern}`
+      filename=`echo $filename | grep -F ${pattern}`
+    done
+    for exclusion in "${exclusions[@]}"
+    do
+      filename=`echo $filename | grep -v -F ${exclusion}`
     done
     if [ "$filename" != "" ]; then
       filename="${filename//!/\\!}"
@@ -144,7 +163,11 @@ compressedFile=$1
     filename="$line"
     for pattern in "${patterns[@]}"
     do
-      filename=`echo $filename | grep ${pattern}`
+      filename=`echo $filename | grep -F ${pattern}`
+    done
+    for exclusion in "${exclusions[@]}"
+    do
+      filename=`echo $filename | grep -v -F ${exclusion}`
     done
     if [ "$filename" != "" ]; then
       filename="${filename//!/\\!}"
