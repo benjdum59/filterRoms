@@ -31,6 +31,8 @@ You can now run the following command:
 ./filterRoms.sh
 ```
 
+Optional: you can define some pattern to exclude in the excluions.txt file
+
 Output
 ------
 Because of the f*** exclamation mark character, I was not able to uncompressed the desired files. If you have a solution, I would appreciate.
