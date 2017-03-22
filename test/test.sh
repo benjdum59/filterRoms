@@ -21,6 +21,13 @@ fi
 find ../output -type f -not -name .gitignore -delete
 
 #Init travis ref file
+find ./ref-travis -type f -name "*.txt" -delete
+cp ./ref/* ./ref-travis/
+cd ref
+for file in *; do
+  sed 's/\/Users\/benjamindumont\/Documents\/Development\/shell\/filterRoms\//\/home\/travis\/build\/benjdum59\/filterRoms\//g' $file > ../ref-travis/$file
+done
+cd ..
 
 #Running code
 ../filterRoms.sh
