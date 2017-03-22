@@ -10,7 +10,7 @@ function showError {
 #Go the the test directory
 scriptPath=$(cd $(dirname $0);echo $PWD)
 cd ${scriptPath}
-cp ./input/* ../input
+cp -R ./input/* ../input
 if [ "$1" = "travis" ]; then
   refDir='ref-travis'
 else
@@ -19,6 +19,9 @@ fi
 
 #Cleaning output directory
 find ../output -type f -not -name .gitignore -delete
+
+#Cleaning result directory
+find ./result -type f -not -name .gitignore -delete
 
 #Init travis ref file
 find ./ref-travis -type f -name "*.txt" -delete
@@ -70,7 +73,7 @@ do
     hexdump -C "${refDir}/${filename}" > ref.hex
     hexdump -C "result/${filename}" > result.hex
     echo "========= HEX DIFF ============"
-    diff file1.hex file2.hex
+    diff ref.hex result.hex
     echo "========== REFERENCE =========="
     cat ref.hex
     echo "==========   RESULT  =========="
