@@ -16,7 +16,14 @@ find ../input -type f -not -name .gitignore -delete
 
 cp -R ./input/* ../input
 if [ "$1" = "travis" ]; then
-  refDir='ref-travis'
+  os=`uname`
+  if [ "$os"="Darwin" ];then
+    echo "MAC OS SYSTEM"
+    refDir='ref-travis-macos'
+  else
+    echo "LINUX System"
+    refDir='ref-travis-linux'
+  fi
 else
   refDir='ref'
 fi
@@ -30,11 +37,12 @@ find ./result -type f -not -name .gitignore -delete
 #Cleaning input directory
 
 #Init travis ref file
-find ./ref-travis -type f -name "*.txt" -delete
-cp ./ref/* ./ref-travis/
+find ./ref-travis-linux -type f -name "*.txt" -delete
+find ./ref-travis-macos -type f -name "*.txt" -delete
 cd ref
 for file in *; do
-  sed 's/\/Users\/benjamindumont\/Documents\/Development\/shell\/filterRoms\//\/home\/travis\/build\/benjdum59\/filterRoms\//g' $file > ../ref-travis/$file
+  sed 's/\/Users\/benjamindumont\/Documents\/Development\/shell\/filterRoms\//\/home\/travis\/build\/benjdum59\/filterRoms\//g' $file > ../ref-travis-linux/$file
+  sed 's/\/Users\/benjamindumont\/Documents\/Development\/shell\/filterRoms\//\/Users\/travis\/build\/benjdum59\/filterRoms\//g' $file > ../ref-travis-macos/$file
 done
 cd ..
 
