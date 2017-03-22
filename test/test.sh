@@ -20,6 +20,8 @@ fi
 #Cleaning output directory
 find ../output -type f -not -name .gitignore -delete
 
+#Init travis ref file
+
 #Running code
 ../filterRoms.sh
 
