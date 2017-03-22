@@ -94,17 +94,29 @@ function fctIdentifyMimeType {
   fi
 }
 
-function fctRegularFile {
-  filePath=$1
-  filename=`basename "${filePath}"`
+function fctCheckFilename {
+  filename=$1
+  echo "Filename: ${filename}"
   for pattern in "${patterns[@]}"
   do
     filename=`echo $filename | grep -F ${pattern}`
+    if [ "$filename" = "" ]; then
+      return 1
+    fi
   done
   for exclusion in "${exclusions[@]}"
   do
     filename=`echo $filename | grep -v -F ${exclusion}`
+    if [ "$filename" = "" ]; then
+      return 1
+    fi
   done
+}
+
+function fctRegularFile {
+  filePath=$1
+  filename=`basename "${filePath}"`
+  fctCheckFilename "${filename}"
   if [ "$filename" != "" ]; then
       filePath="${filePath//!/\\!}"
       echo "cp \"${filePath}\" \"${destinationPath}\"" >> ${destinationPath}/regularFilesCommands.txt
@@ -116,15 +128,7 @@ compressedFile=$1
 while read -r line
 do
     filename="$line"
-    echo "FILENAME:$filename"
-    for pattern in "${patterns[@]}"
-    do
-      filename=`echo $filename | grep -F ${pattern}`
-    done
-    for exclusion in "${exclusions[@]}"
-    do
-      filename=`echo $filename | grep -v -F ${exclusion}`
-    done
+    fctCheckFilename "${filename}"
     if [ "$filename" != "" ]; then
       filename="${filename//!/\\!}"
       compressedFile="${compressedFile//!/\\!}"
@@ -139,14 +143,7 @@ compressedFile=$1
   while read -r line
   do
     filename="$line"
-    for pattern in "${patterns[@]}"
-    do
-      filename=`echo $filename | grep -F ${pattern}`
-    done
-    for exclusion in "${exclusions[@]}"
-    do
-      filename=`echo $filename | grep -v -F ${exclusion}`
-    done
+    fctCheckFilename "${filename}"
     if [ "$filename" != "" ]; then
       filename="${filename//!/\\!}"
       compressedFile="${compressedFile//!/\\!}"
@@ -161,14 +158,7 @@ compressedFile=$1
   while read -r line
   do
     filename="$line"
-    for pattern in "${patterns[@]}"
-    do
-      filename=`echo $filename | grep -F ${pattern}`
-    done
-    for exclusion in "${exclusions[@]}"
-    do
-      filename=`echo $filename | grep -v -F ${exclusion}`
-    done
+    fctCheckFilename "${filename}"
     if [ "$filename" != "" ]; then
       filename="${filename//!/\\!}"
       compressedFile="${compressedFile//!/\\!}"
