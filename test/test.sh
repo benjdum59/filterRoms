@@ -10,6 +10,10 @@ function showError {
 #Go the the test directory
 scriptPath=$(cd $(dirname $0);echo $PWD)
 cd ${scriptPath}
+
+#Cleaning input directory
+find ../input -type f -not -name .gitignore -delete
+
 cp -R ./input/* ../input
 if [ "$1" = "travis" ]; then
   refDir='ref-travis'
@@ -22,6 +26,8 @@ find ../output -type f -not -name .gitignore -delete
 
 #Cleaning result directory
 find ./result -type f -not -name .gitignore -delete
+
+#Cleaning input directory
 
 #Init travis ref file
 find ./ref-travis -type f -name "*.txt" -delete
