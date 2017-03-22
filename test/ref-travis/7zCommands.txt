@@ -1,6 +1,7 @@
 7z e "/home/travis/build/benjdum59/filterRoms/input/Archive.7z" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!] copie.txt"
 7z e "/home/travis/build/benjdum59/filterRoms/input/Archive.7z" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!].txt"
 7z e "/home/travis/build/benjdum59/filterRoms/input/Archive.7z" -o/home/travis/build/benjdum59/filterRoms/output "test ' (E)[\!].txt"
+7z e "/home/travis/build/benjdum59/filterRoms/input/archive.rar" -o/home/travis/build/benjdum59/filterRoms/output "test ' (E)[\!].txt"
 7z e "/home/travis/build/benjdum59/filterRoms/input/archive.rar" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!].txt"
 7z e "/home/travis/build/benjdum59/filterRoms/input/archive.rar" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!] copie.txt"
 7z e "/home/travis/build/benjdum59/filterRoms/input/Archive.zip" -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!] copie.txt"
@@ -17,3 +18,4 @@
 7z x  "/home/travis/build/benjdum59/filterRoms/input/Fichier comprime.tgz" -so |  7z x -si -ttar -o/home/travis/build/benjdum59/filterRoms/output "test ' (E)[\!].txt"
 7z x  "/home/travis/build/benjdum59/filterRoms/input/tar-archive-name.tar.gz" -so |  7z x -si -ttar -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!] copie.txt"
 7z x  "/home/travis/build/benjdum59/filterRoms/input/tar-archive-name.tar.gz" -so |  7z x -si -ttar -o/home/travis/build/benjdum59/filterRoms/output "bdt(E)[\!].txt"
+7z x  "/home/travis/build/benjdum59/filterRoms/input/tar-archive-name.tar.gz" -so |  7z x -si -ttar -o/home/travis/build/benjdum59/filterRoms/output "test ' (E)[\!].txt"
