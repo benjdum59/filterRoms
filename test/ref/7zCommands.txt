@@ -1,6 +1,7 @@
 7z e "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/Archive.7z" -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "bdt(E)[\!] copie.txt"
 7z e "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/Archive.7z" -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "bdt(E)[\!].txt"
 7z e "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/Archive.7z" -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "test ' (E)[\!].txt"
+7z e "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/archive.rar" -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "test ' (E)[\!].txt"
 7z e "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/archive.rar" -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "bdt(E)[\!].txt"
 7z e "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/archive.rar" -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "bdt(E)[\!] copie.txt"
 7z e "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/Archive.zip" -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "bdt(E)[\!] copie.txt"
@@ -17,3 +18,4 @@
 7z x  "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/Fichier comprime.tgz" -so |  7z x -si -ttar -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "test ' (E)[\!].txt"
 7z x  "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/tar-archive-name.tar.gz" -so |  7z x -si -ttar -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "bdt(E)[\!] copie.txt"
 7z x  "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/tar-archive-name.tar.gz" -so |  7z x -si -ttar -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "bdt(E)[\!].txt"
+7z x  "/Users/benjamindumont/Documents/Development/shell/filterRoms/input/tar-archive-name.tar.gz" -so |  7z x -si -ttar -o/Users/benjamindumont/Documents/Development/shell/filterRoms/output "test ' (E)[\!].txt"
