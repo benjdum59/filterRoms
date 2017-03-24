@@ -11,7 +11,8 @@ if [ "$TRAVIS_BRANCH" == "develop" ]; then
   echo "Previous build success number: $nbBuildSuccess"
   nbBuildSuccess=`expr $nbBuildSuccess + 1`
   echo "New build success number: ${nbBuildSuccess}"
-  if [ ${nbBuildSuccess} -ne 2 ];
+  echo "$nbBuildSuccess">"${nbBuildSuccessFile}"
+  if [ ${nbBuildSuccess} -ne 2 ]; then
     echo "There are still some builds to run or some build in failure state"
     exit 0
   fi
