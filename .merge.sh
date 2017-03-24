@@ -3,21 +3,20 @@
 echo "AFTER SUCCESS SCRIPT"
 
 if [ "$TRAVIS_BRANCH" == "develop" ]; then
-  nbBuildSuccessFile="/tmp/nbBuildSuccess.txt"
-  if [ ! -f "${nbBuildSuccessFile}" ]; then
-    echo '0'>"${nbBuildSuccessFile}"
-  fi
-  nbBuildSuccess=`cat "${nbBuildSuccessFile}"`
-  echo "Previous build success number: $nbBuildSuccess"
-  nbBuildSuccess=`expr $nbBuildSuccess + 1`
-  echo "New build success number: ${nbBuildSuccess}"
-  echo "$nbBuildSuccess">"${nbBuildSuccessFile}"
-  if [ ${nbBuildSuccess} -ne 2 ]; then
-    echo "There are still some builds to run or some build in failure state"
-    exit 0
-  fi
-  echo "Works $TRAVIS_BRANCH"
-  echo "$TRAVIS_REPO_SLUG"
+#  nbBuildSuccessFile="/tmp/nbBuildSuccess.txt"
+#  if [ ! -f "${nbBuildSuccessFile}" ]; then
+#    echo '0'>"${nbBuildSuccessFile}"
+#  fi
+#  nbBuildSuccess=`cat "${nbBuildSuccessFile}"`
+#  echo "Previous build success number: $nbBuildSuccess"
+#  nbBuildSuccess=`expr $nbBuildSuccess + 1`
+#  echo "New build success number: ${nbBuildSuccess}"
+#  echo "$nbBuildSuccess">"${nbBuildSuccessFile}"
+#  if [ ${nbBuildSuccess} -ne 2 ]; then
+#    echo "There are still some builds to run or some build in failure state"
+#    exit 0
+#  fi
+#  echo "$TRAVIS_REPO_SLUG"
   url="https://${GITHUB_KEY}@github.com/${TRAVIS_REPO_SLUG}.git"
   cd /tmp
   git clone ${url}
