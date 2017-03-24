@@ -4,7 +4,7 @@ os:
     - linux
     - osx
 
-script:
+install:
     - bash test/test.sh travis
 
 addons:
