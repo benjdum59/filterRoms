@@ -17,8 +17,7 @@ find ../input -type f -not -name .gitignore -delete
 cp -R ./input/* ../input
 if [ "$1" = "travis" ]; then
   uname -a
-  sw_vers
-  if [ $? -eq 0 ];then
+  if [ "$TRAVIS_OS_NAME" == "osx" ];then
     echo "MAC OS SYSTEM"
     refDir='ref-travis-macos'
   else
