@@ -16,8 +16,9 @@ find ../input -type f -not -name .gitignore -delete
 
 cp -R ./input/* ../input
 if [ "$1" = "travis" ]; then
-  os=`uname`
-  if [ "$os"="Darwin" ];then
+  uname -a
+  sw_vers
+  if [ $? -eq 0 ];then
     echo "MAC OS SYSTEM"
     refDir='ref-travis-macos'
   else
