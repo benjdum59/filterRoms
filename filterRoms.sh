@@ -12,6 +12,7 @@ function fctInit {
   tgzMimeType="application/x-bzip2"
   gzipMimeType="application/x-gzip"
   sevenZMimeType="application/x-7z-compressed"
+  octetStreamMimeType="application/octet-stream"
   archivePath="${scriptPath}/input"
   destinationPath="${scriptPath}/output"
 }
@@ -88,9 +89,42 @@ function fctIdentifyMimeType {
   elif [ $mimetype = ${tgzMimeType} ]; then
     echo "File is a tbz2 file"
     fctTgz2Process "$1" 
+  elif [ $mimetype = ${octetStreamMimeType} ]; then
+    fctOctetStream "$1"
   else
     echo "File will be treated as a regular file"
     fctRegularFile "$1" 
+  fi
+}
+
+function fctOctetStream {
+  echo "Determining file type with extension for file $1"
+  extension="${1##*.}"
+  extension2="${1#*.}"
+  if [ "$extension" = "rar" ]; then
+    echo "File is a rar file"
+    fct7zProcess "$1"
+  elif [ "$extension" = "7z" ]; then
+    echo "File is a 7z file"
+    fct7zProcess "$1"
+  elif [ "$extension" = "zip" ]; then
+    echo "File is a zip file"
+    fct7zProcess "$1"
+  elif [ "$extension" = "tar" ]; then
+    echo "File is a tar file"
+    fct7zProcess "$1"
+  elif [ "$extension" = "tgz" ] || [ "$extension2" = "tar.gz" ]; then
+      echo "File is a tgz or tar.gz file"
+      fctTgzProcess "$1"
+  elif [ "$extension" = "gz" ]; then
+      echo "File is a gz file" 
+      fct7zProcess "$1"
+  elif [ "$extension" = "tbz2" ]; then
+    echo "File is a tbz2 file"
+    fctTgz2Process "$1"
+  else
+    echo "File will be treated as a regular file"
+    fctRegularFile "$1"
   fi
 }
 
