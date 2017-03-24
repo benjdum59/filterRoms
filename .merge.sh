@@ -5,7 +5,7 @@ echo "AFTER SUCCESS SCRIPT"
 if [ "$TRAVIS_BRANCH" == "develop" ]; then
   nbBuildSuccessFile="/tmp/nbBuildSuccess.txt"
   if [ ! -f "${nbBuildSuccessFile}" ]; then
-    echo '1'>"${nbBuildSuccessFile}"
+    echo '0'>"${nbBuildSuccessFile}"
   fi
   nbBuildSuccess=`cat "${nbBuildSuccessFile}"`
   echo "Previous build success number: $nbBuildSuccess"
