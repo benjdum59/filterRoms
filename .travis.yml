@@ -12,5 +12,9 @@ addons:
         packages:
             - p7zip-full
 
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install p7zip; fi
+
 after_success:
     - bash .merge.sh
