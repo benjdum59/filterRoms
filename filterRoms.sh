@@ -11,6 +11,7 @@ function fctInit {
   targzMimeType="application/tar+gzip"
   tgzMimeType="application/x-bzip2"
   gzipMimeType="application/x-gzip"
+  gzipMimeType2="application/gzip"
   sevenZMimeType="application/x-7z-compressed"
   octetStreamMimeType="application/octet-stream"
   archivePath="${scriptPath}/input"
@@ -76,7 +77,7 @@ function fctIdentifyMimeType {
   elif [ $mimetype = ${targzMimeType} ]; then
     echo "File is a tar.gz file"
     fctTgzProcess "$1"
-  elif [ $mimetype = ${gzipMimeType} ]; then
+  elif [ $mimetype = ${gzipMimeType} ] ||[ $mimetype = ${gzipMimeType2} ]; then
     echo "File is a gz file"
     extension="${1##*.}"
     extension2=${1#*.}
