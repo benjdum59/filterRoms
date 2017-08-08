@@ -77,7 +77,7 @@ function fctIdentifyMimeType {
   elif [ $mimetype = ${targzMimeType} ]; then
     echo "File is a tar.gz file"
     fctTgzProcess "$1"
-  elif [ $mimetype = ${gzipMimeType} || $mimetype = ${gzipMimeType2} ]; then
+  elif [ $mimetype = ${gzipMimeType} ] ||[ $mimetype = ${gzipMimeType2} ]; then
     echo "File is a gz file"
     extension="${1##*.}"
     extension2=${1#*.}
