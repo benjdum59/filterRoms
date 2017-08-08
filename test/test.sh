@@ -55,8 +55,8 @@ find ../output -type f -not -name .gitignore   -exec mv '{}' ./result \;
 #Analysing results
 error=0
 
-resultNb=$(find result | wc -l)
-refNb=$(find ${refDir} | wc -l)
+resultNb=$(find result -type f -not -name ".*" | wc -l)
+refNb=$(find ${refDir} -type f -not -name ".*"| wc -l)
 echo "-------------------- REF DIR -----------------"
 echo $(find result | wc -l)
 echo "-------------------- RESULT ------------------"
