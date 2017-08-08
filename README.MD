@@ -1,7 +1,7 @@
 #### Build status: ####
 master: [![Build Status](https://travis-ci.org/benjdum59/filterRoms.svg?branch=master)](https://travis-ci.org/benjdum59/filterRoms)
 develop: [![Build Status](https://travis-ci.org/benjdum59/filterRoms.svg?branch=develop)](https://travis-ci.org/benjdum59/filterRoms)
-
+codacy: [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b29e58c905314f47a65e72ccdc6684b9)](https://www.codacy.com/app/benjdum59/filterRoms?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=benjdum59/filterRoms&amp;utm_campaign=Badge_Grade)
 
 ## FilterRoms ##
 

@@ -22,7 +22,7 @@ if [ "$TRAVIS_BRANCH" == "develop" ]; then
   git clone ${url}
   git config --global user.email "travis@travis"
   git config --global user.name "Travis CI"
-  directory=`echo ${TRAVIS_REPO_SLUG} | awk -F '/' ' { print $2  } '`
+  directory=$(echo ${TRAVIS_REPO_SLUG} | awk -F '/' ' { print $2  } ')
   cd $directory
   git checkout master
   git merge origin/develop --no-edit
