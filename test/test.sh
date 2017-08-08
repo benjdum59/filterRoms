@@ -57,6 +57,11 @@ error=0
 
 resultNb=$(find result | wc -l)
 refNb=$(find ${refDir} | wc -l)
+echo $(find result | wc -l)
+echo $(find ${refDir} | wc -l)
+find ${refDir}
+find ${refDir}
+
 
 if [ ${resultNb} -ne ${refNb} ]; then
   showError "output and ref directories don't have the same number of files"
