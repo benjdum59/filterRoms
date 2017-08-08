@@ -38,8 +38,8 @@ function fctGetPatterns {
 }
 
 function fctCheckEnv {
-  inputData=`find ${archivePath} -type f | grep -v .gitignore  | grep -v .DS_Store | wc -l | tr -d ' '`
-  outputData=`find ${destinationPath} -type f | grep -v .gitignore | grep -v .DS_Store | wc -l | tr -d ' '`
+  inputData=$(find ${archivePath} -type f | grep -v .gitignore  | grep -v .DS_Store | wc -l | tr -d ' ')
+  outputData=$(find ${destinationPath} -type f | grep -v .gitignore | grep -v .DS_Store | wc -l | tr -d ' ')
   if [ $inputData -eq 0 ]; then
     fctErrorDirectoryEmpty "${archivePath}"
   fi
@@ -59,7 +59,7 @@ done
 }
 
 function fctIdentifyMimeType {
-  mimetype=`file --mime-type  "$1" | cut -d ':' -f 2`
+  mimetype=$(file --mime-type  "$1" | cut -d ':' -f 2)
   echo "Mime-Type found: $mimetype for file $1"
   if [ $mimetype = $rarMimeType ] || [ $mimetype = $rarMimeType2 ]; then
     echo "File is a rar file"
@@ -133,14 +133,14 @@ function fctCheckFilename {
   echo "Filename: ${filename}"
   for pattern in "${patterns[@]}"
   do
-    filename=`echo $filename | grep -F ${pattern}`
+    filename=$(echo $filename | grep -F ${pattern})
     if [ "$filename" = "" ]; then
       return 1
     fi
   done
   for exclusion in "${exclusions[@]}"
   do
-    filename=`echo $filename | grep -v -F ${exclusion}`
+    filename=$(echo $filename | grep -v -F ${exclusion})
     if [ "$filename" = "" ]; then
       return 1
     fi
@@ -149,7 +149,7 @@ function fctCheckFilename {
 
 function fctRegularFile {
   filePath=$1
-  filename=`basename "${filePath}"`
+  filename=$(basename "${filePath}")
   fctCheckFilename "${filename}"
   if [ "$filename" != "" ]; then
       filePath="${filePath//!/\\!}"
@@ -196,7 +196,7 @@ compressedFile=$1
     if [ "$filename" != "" ]; then
       filename="${filename//!/\\!}"
       compressedFile="${compressedFile//!/\\!}"
-      filename=`echo $filename`
+      filename=$(echo $filename)
       echo "Treating $filename"
       echo "7z x  \"${compressedFile}\" -so |  7z x -si -ttar -o${destinationPath} \"${filename}\"" >> ${destinationPath}/7zCommands.txt
     fi

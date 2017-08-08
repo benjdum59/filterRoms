@@ -1,10 +1,10 @@
-#/bin/bash
+#!/bin/bash
 
 function showError {
   echo '!!!!!!!!!!!!!!!!!!!!!!!!!   ERROR   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
   echo $1
   echo '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
-  error=`expr $error + 1`
+  error=$(expr $error + 1)
 }
 
 #Go the the test directory
@@ -55,8 +55,8 @@ find ../output -type f -not -name .gitignore   -exec mv '{}' ./result \;
 #Analysing results
 error=0
 
-resultNb=`ls result | wc -l`
-refNb=`ls ${refDir} | wc -l`
+resultNb=$(ls result | wc -l)
+refNb=$(ls ${refDir} | wc -l)
 
 if [ ${resultNb} -ne ${refNb} ]; then
   showError "output and ref directories don't have the same number of files"
@@ -76,7 +76,7 @@ for checksum in ${refArray[@]}
 do
   containsElement "${checksum}" "${resultArray[@]}"
   if [ $? -ne 0 ]; then
-    filename=`echo ${checksum} | awk -F '_' ' { print $3 } '`
+    filename=$(echo ${checksum} | awk -F '_' ' { print $3 } ')
     diff "${refDir}/${filename}" "result/${filename}"
     showError "${filename} files differ"
     echo "========== REFERENCE =========="
