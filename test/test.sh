@@ -4,7 +4,7 @@ function showError {
   echo '!!!!!!!!!!!!!!!!!!!!!!!!!   ERROR   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
   echo $1
   echo '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
-  error=$(expr $error + 1)
+  error=$(( $error + 1))
 }
 
 #Go the the test directory
@@ -55,8 +55,21 @@ find ../output -type f -not -name .gitignore   -exec mv '{}' ./result \;
 #Analysing results
 error=0
 
-resultNb=$(ls result | wc -l)
-refNb=$(ls ${refDir} | wc -l)
+resultNb=$(find result -type f -not -name ".*" | wc -l)
+refNb=$(find ${refDir} -type f -not -name ".*"| wc -l)
+echo "-------------------- REF DIR -----------------"
+echo $(find result | wc -l)
+echo "-------------------- RESULT ------------------"
+echo $(find ${refDir} | wc -l)
+echo "-------------------- REF DIR -----------------"
+find ${refDir}
+echo "-------------------- RESULT ------------------"
+find ${refDir}
+echo "--------------------"
+ls ${refDir}
+echo "--------------------"
+ls result 
+echo "--------------------"
 
 if [ ${resultNb} -ne ${refNb} ]; then
   showError "output and ref directories don't have the same number of files"
