@@ -58,17 +58,17 @@ error=0
 resultNb=$(find result -type f -not -name ".*" | wc -l)
 refNb=$(find ${refDir} -type f -not -name ".*"| wc -l)
 echo "-------------------- REF DIR -----------------"
-echo $(find result | wc -l)
+echo $(find ${refDir} -type f -not -name ".*"| wc -l)
 echo "-------------------- RESULT ------------------"
-echo $(find ${refDir} | wc -l)
+echo $(find result -type f -not -name ".*" | wc -l)
 echo "-------------------- REF DIR -----------------"
-find ${refDir}
+find ${refDir} -type f -not -name ".*"
 echo "-------------------- RESULT ------------------"
-find ${refDir}
+find result -type f -not -name ".*"
 echo "--------------------"
-ls ${refDir}
+ls -a ${refDir}
 echo "--------------------"
-ls result 
+ls -a result 
 echo "--------------------"
 
 if [ ${resultNb} -ne ${refNb} ]; then
