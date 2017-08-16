@@ -4,7 +4,7 @@ function showError {
   echo '!!!!!!!!!!!!!!!!!!!!!!!!!   ERROR   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
   echo $1
   echo '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
-  error=$(( $error + 1))
+  error=$(( error + 1))
 }
 
 #Go the the test directory
