@@ -74,20 +74,36 @@ echo "--------------------"
 if [ ${resultNb} -ne ${refNb} ]; then
   showError "output and ref directories don't have the same number of files"
 fi
-cd ${refDir}
-refArray=($(find . -type f | grep -v ".DS_Store" | grep -v ".gitignore" |xargs cksum | tr ' ' '_'))
-cd ../result
-resultArray=($(find . -type f | grep -v ".DS_Store" | grep -v ".gitignore" |xargs cksum | tr ' ' '_'))
-cd ${scriptPath}
 
+cd ${refDir}
+refArray=($(find . -type f | grep -v ".DS_Store" | grep -v ".gitignore"))
+for file in ${refArray[@]}
+do
+    cat $file | sort > ${file}.temp
+    rm -rf ${file}
+    mv ${file}.temp ${file}
+done
+refArrayChecksum=($(find . -type f | grep -v ".DS_Store" | grep -v ".gitignore" |xargs cksum | tr ' ' '_'))
+
+cd ../result
+resultArray=($(find . -type f | grep -v ".DS_Store" | grep -v ".gitignore"))
+for file in ${resultArray[@]}
+do
+    cat $file | sort > ${file}.temp
+    rm -rf ${file}
+    mv ${file}.temp ${file}
+done
+resultArrayChecksum=($(find . -type f | grep -v ".DS_Store" | grep -v ".gitignore" |xargs cksum | tr ' ' '_'))
+
+cd ${scriptPath}
 
 containsElement () {
   for e in "${@:2}"; do [[ "$e" = "$1" ]] && return 0; done; return 1;
 }
 
-for checksum in ${refArray[@]}
+for checksum in ${refArrayChecksum[@]}
 do
-  containsElement "${checksum}" "${resultArray[@]}"
+  containsElement "${checksum}" "${resultArrayChecksum[@]}"
   if [ $? -ne 0 ]; then
     filename=$(echo ${checksum} | awk -F '_' ' { print $3 } ')
     diff "${refDir}/${filename}" "result/${filename}"
